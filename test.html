@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Điện lạnh toàn cầu - Sửa chữa & Bảo trì Chiller chuyên nghiệp</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      line-height: 1.6;
+      background: #f5f7f6;
+      color: #333;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(90deg, #00796b, #004d40);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      font-size: 24px;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #b2dfdb;
+    }
+
+    /* HERO */
+    .hero {
+      height: 450px;
+      background: url('anh/baotribaoduong.png') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      font-size: 36px;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    .hero span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px 0;
+    }
+    h2 {
+      color: #004d40;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 26px;
+    }
+    h3 { color: #00695c; }
+
+    /* GIỚI THIỆU */
+    .about {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .about img {
+      width: 80%;
+      max-width: 350px;
+      border-radius: 12px;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+    }
+    .about p {
+      flex: 1;
+      font-size: 18px;
+      text-align: justify;
+    }
+
+    /* DỊCH VỤ */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    .service {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    .service img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .note {
+      font-size: 14px;
+      color: #555;
+      font-style: italic;
+      margin-top: 5px;
+    }
+
+    /* LÝ DO CHỌN */
+    .reasons {
+      background: #e0f2f1;
+      border-radius: 10px;
+      padding: 40px;
+      margin-top: 50px;
+    }
+    .reasons ul {
+      list-style: none;
+      padding: 0;
+      font-size: 17px;
+    }
+    .reasons li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 25px;
+    }
+    .reasons li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #00796b;
+    }
+
+    /* LIÊN HỆ */
+    .contact {
+      background: white;
+      border-radius: 10px;
+      padding: 40px;
+      margin-top: 50px;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    }
+    .contact p { margin: 6px 0; }
+    .contact-form {
+      margin-top: 15px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+    .contact-form button {
+      background: #00796b;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+    .contact-form button:hover {
+      background: #004d40;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #004d40;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 60px;
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header { flex-direction: column; text-align: center; }
+      nav a { margin: 10px; display: inline-block; }
+      .hero { height: 300px; font-size: 26px; }
+      .about { flex-direction: column; text-align: center; }
+      .about img { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Điện Lạnh Toàn Cầu</h1>
+    <nav>
+      <a href="#gioithieu">Giới thiệu</a>
+      <a href="#dichvu">Dịch vụ</a>
+      <a href="#lydo">Lý do chọn</a>
+      <a href="#lienhe">Liên hệ</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <span>SỬA CHỮA & BẢO TRÌ HỆ THỐNG CHILLER CHUYÊN NGHIỆP</span>
+  </div>
+
+  <div class="container">
+    
+    <!-- GIỚI THIỆU -->
+    <section id="gioithieu" class="about">
+      <img src="anh/anhbia.jpg" alt="Giới thiệu Điện Lạnh Toàn Cầu">
+      <p>
+        <b>Điện Lạnh Toàn Cầu</b> là đơn vị hàng đầu trong lĩnh vực 
+        <b>sửa chữa, bảo trì và thay thế thiết bị Chiller công nghiệp</b>.
+        Với đội ngũ kỹ thuật viên lành nghề, dịch vụ 24/7 và hệ thống máy móc hiện đại,
+        chúng tôi luôn mang lại giải pháp nhanh chóng, tiết kiệm và hiệu quả nhất
+        cho doanh nghiệp của bạn.
+      </p>
+    </section>
+
+    <!-- DỊCH VỤ -->
+    <section id="dichvu">
+      <h2>Dịch vụ của chúng tôi</h2>
+      <div class="services">
+        <div class="service">
+          <img src="anh/suachuadaitumaynen.png" alt="Thay máy nén">
+          <h3>Thay máy nén</h3>
+          <p class="note">Scroll, Screw, Centrifugal...</p>
+        </div>
+        <div class="service">
+          <img src="anh/suachuadaitumaynen2.jpg" alt="Đại tu máy nén">
+          <h3>Đại tu máy nén</h3>
+          <p class="note">Kiểm tra bạc đạn, rotor, vệ sinh buồng nén</p>
+        </div>
+        <div class="service">
+          <img src="anh/suachuadongcobomquat1.jpg" alt="Dàn ngưng tụ">
+          <h3>Thay dàn ngưng (Condenser)</h3>
+          <p class="note">Nâng cao hiệu suất trao đổi nhiệt</p>
+        </div>
+        <div class="service">
+          <img src="anh/suachuadongco.png" alt="Bơm nước">
+          <h3>Sửa chữa bơm nước</h3>
+          <p class="note">Đảm bảo lưu lượng tuần hoàn ổn định</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LÝ DO -->
+    <section id="lydo" class="reasons">
+      <h2>Tại sao chọn Điện Lạnh Toàn Cầu?</h2>
+      <ul>
+       <p><b>Năng lực kỹ thuật:</b> Đội ngũ kỹ thuật chuyên nghiệp Kỹ sư và kỹ thuật viên có nhiều năm kinh nghiệm trong lĩnh vực sửa chữa, bảo trì máy móc. Thường xuyên được đào tạo, cập nhật công nghệ mới để xử lý mọi sự cố nhanh chóng và chính xác</p>
+      <p><b>Dịch vụ nhanh chóng và đúng hẹn: </b> Hỗ trợ khẩn cấp 24/7, luôn có mặt khi khách hàng cần.</p>
+      <p>Cam kết tiến độ sửa chữa đúng thời gian đã thỏa thuận, hạn chế tối đa gián đoạn sản xuất</p>
+      <p><b>Trang thiết bị hiện đại: </b> Sử dụng công cụ, máy móc chuyên dụng để đảm bảo chất lượng sửa chữa.</p>
+      <p>Có khả năng xử lý nhiều loại máy móc công nghiệp khác nhau.</p>
+      <p><b>Giải pháp tối ưu và tiết kiệm:</b>Đưa ra phương án sửa chữa phù hợp, tiết kiệm chi phí cho khách hàng.</p>
+      <p>Tư vấn bảo trì định kỳ để kéo dài tuổi thọ máy móc, giảm thiểu hỏng hóc.</p>
+      <p><b>Bảo hành và hậu mãi uy tín:</b>Chính sách bảo hành rõ ràng, minh bạch.</p>
+      <p>Hỗ trợ kỹ thuật sau sửa chữa, sẵn sàng giải đáp mọi thắc mắc.</p>
+      <p><b>Uy tín và sự tin tưởng:</b>Được nhiều doanh nghiệp, xưởng sản xuất tin tưởng lựa chọn.</p>
+      <p>Luôn đặt lợi ích và sự hài lòng của khách hàng lên hàng đầu.</p>
+      </ul>
+    </section>
+
+    <!-- LIÊN HỆ -->
+    <section id="lienhe" class="contact">
+      <h2>Liên hệ với chúng tôi</h2>
+      <p><b>Hotline:</b> 0984 555 864 | 0336 829 255</p>
+      <p><b>Email:</b> nhunhucuong@gmail.com</p>
+      <p><b>Địa chỉ:</b> Hà Nội</p>
+
+  <section id="lien-he" style="padding: 60px 0; background-color: #f9f9f9;">
+  <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+    <h2 style="color: #00796b;">Đăng ký tư vấn miễn phí</h2>
+    <p>Hãy để lại thông tin, chúng tôi sẽ liên hệ hỗ trợ bạn nhanh nhất!</p>
+    <form action="https://formspree.io/f/mzzjvzjd" method="POST" style="margin-top: 20px; text-align: left;">
+      
+      <label for="name">Họ và tên</label><br>
+      <input type="text" name="name" id="name" required 
+             style="width:100%; padding:10px; margin:8px 0; border-radius:8px; border:1px solid #ccc;"><br>
+      
+      <label for="phone">Số điện thoại</label><br>
+      <input type="tel" name="phone" id="phone" required 
+             style="width:100%; padding:10px; margin:8px 0; border-radius:8px; border:1px solid #ccc;"><br>
+      
+      <label for="message">Nội dung cần tư vấn</label><br>
+      <textarea name="message" id="message" rows="5" required 
+                style="width:100%; padding:10px; margin:8px 0; border-radius:8px; border:1px solid #ccc;"></textarea><br>
+      
+      <button type="submit" 
+              style="background-color:#00796b; color:white; padding:12px 20px; border:none; border-radius:8px; cursor:pointer;">
+        Gửi thông tin
+      </button>
+    </form>
+  </div>
+</section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Điện Lạnh Toàn Cầu - Sửa chữa & Bảo trì hệ thống Chiller chuyên nghiệp
+  </footer>
+
+</body>
+</html>
